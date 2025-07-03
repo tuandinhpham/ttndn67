@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Luật Thuế TNDN 67/2025/QH15</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Chosen vibrant palette: Brilliant Blues */
+        /* Primary: #005f73 */
+        /* Secondary: #0a9396 */
+        /* Accent 1: #94d2bd */
+        /* Accent 2: #e9d8a6 */
+        /* Accent 3: #ee9b00 */
+        /* Accent 4: #ca6702 */
+        /* Accent 5: #bb3e03 */
+        /* Accent 6: #9b2226 */
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light background for readability */
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px; /* Base height for charts */
+            max-height: 400px; /* Max height to prevent excessive vertical space */
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px; /* Slightly taller on larger screens */
+            }
+        }
+        .flowchart-step {
+            border: 2px solid #94d2bd;
+            background-color: #f0fdfa;
+        }
+        .flowchart-arrow {
+            color: #0a9396;
+        }
+        .kpi-number {
+            font-weight: 900;
+            color: #005f73;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 20px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #ee9b00;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #ee9b00;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 7.5px; /* Center with the dot */
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #94d2bd;
+        }
+        .icon-box {
+            background-color: #e9d8a633; /* Light accent background */
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#005f73] mb-2">Infographic: Luật Thuế TNDN 67/2025/QH15</h1>
+            <p class="text-lg text-[#0a9396]">Tổng quan các quy định chính có hiệu lực từ 01/10/2025</p>
+            <p class="text-sm text-gray-600 mt-2">Dựa trên nội dung từ LuatVietnam.vn</p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Section 1: Overview and Effective Date -->
+            <div class="card lg:col-span-3">
+                <h2 class="text-2xl font-bold text-[#0a9396] mb-4 text-center">Tổng quan và Hiệu lực thi hành</h2>
+                <p class="text-gray-700 mb-6 text-center">Luật Thuế TNDN số 67/2025/QH15 là văn bản pháp lý quan trọng, điều chỉnh toàn diện các quy định về thuế thu nhập doanh nghiệp tại Việt Nam. Luật này chính thức có hiệu lực từ ngày 01 tháng 10 năm 2025 và sẽ được áp dụng cho kỳ tính thuế TNDN từ năm 2025.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
+                    <div class="icon-box">
+                        <div class="text-5xl mb-3">🗓️</div>
+                        <h3 class="font-bold text-xl text-[#005f73]">Ngày có hiệu lực</h3>
+                        <p class="text-lg text-[#ca6702] font-semibold">01/10/2025</p>
+                    </div>
+                    <div class="icon-box">
+                        <div class="text-5xl mb-3">📅</div>
+                        <h3 class="font-bold text-xl text-[#005f73]">Áp dụng cho kỳ tính thuế</h3>
+                        <p class="text-lg text-[#ca6702] font-semibold">Từ năm 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: Taxpayers -->
+            <div class="card md:col-span-1 lg:col-span-1">
+                <h2 class="text-2xl font-bold text-[#0a9396] mb-4 text-center">Đối tượng nộp thuế</h2>
+                <p class="text-gray-700 mb-4">Luật này quy định rõ các tổ chức, doanh nghiệp có nghĩa vụ nộp thuế TNDN.</p>
+                <ul class="space-y-3 list-disc list-inside text-gray-700">
+                    <li>**Doanh nghiệp thành lập theo pháp luật Việt Nam:** Bao gồm cả chi nhánh, văn phòng đại diện, nhà máy, xưởng sản xuất, v.v.</li>
+                    <li>**Doanh nghiệp nước ngoài:**
+                        <ul class="list-circle list-inside ml-4">
+                            <li>Có cơ sở thường trú tại Việt Nam.</li>
+                            <li>Không có cơ sở thường trú nhưng có thu nhập phát sinh tại Việt Nam.</li>
+                            <li>Có đại diện tại Việt Nam có thẩm quyền ký kết hợp đồng.</li>
+                            <li>Nền tảng thương mại điện tử, nền tảng số cung cấp hàng hóa/dịch vụ tại Việt Nam.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Section 3: Taxable Income & Exempt Income -->
+            <div class="card md:col-span-1 lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-xl font-bold text-[#ca6702] mb-4">✅ Thu nhập chịu thuế (Ví dụ)</h3>
+                    <p class="text-gray-700 mb-3">Bao gồm thu nhập từ hoạt động sản xuất, kinh doanh chính và các khoản thu nhập khác.</p>
+                    <ul class="space-y-2 list-disc list-inside text-gray-700">
+                        <li>Chuyển nhượng vốn, chứng khoán, bất động sản.</li>
+                        <li>Chuyển nhượng dự án đầu tư, quyền thăm dò khoáng sản.</li>
+                        <li>Lãi tiền gửi, lãi cho vay vốn, bán ngoại tệ.</li>
+                        <li>Thu nhập từ hoạt động hợp tác kinh doanh.</li>
+                        <li>Thu nhập phát sinh tại Việt Nam của doanh nghiệp nước ngoài.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-[#94d2bd] mb-4">🚫 Thu nhập được miễn thuế (Ví dụ)</h3>
+                    <p class="text-gray-700 mb-3">Các khoản thu nhập được miễn thuế nhằm khuyến khích các hoạt động đặc thù.</p>
+                    <ul class="space-y-2 list-disc list-inside text-gray-700">
+                        <li>Nông, lâm, ngư nghiệp tại địa bàn đặc biệt khó khăn.</li>
+                        <li>Nghiên cứu khoa học, phát triển công nghệ, đổi mới sáng tạo.</li>
+                        <li>Sản phẩm từ công nghệ mới lần đầu áp dụng (miễn tối đa 3 năm).</li>
+                        <li>Doanh nghiệp có trên 30% lao động là người khuyết tật, sau cai nghiện.</li>
+                        <li>Thu nhập được chia từ góp vốn, liên doanh trong nước (đã nộp thuế).</li>
+                        <li>Chuyển nhượng chứng chỉ giảm phát thải, tín chỉ carbon.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section 4: Tax Calculation Basis & Method -->
+            <div class="card lg:col-span-3">
+                <h2 class="text-2xl font-bold text-[#0a9396] mb-4 text-center">Căn cứ và Phương pháp tính thuế</h2>
+                <p class="text-gray-700 mb-6 text-center">Quy trình xác định số thuế TNDN phải nộp dựa trên thu nhập chịu thuế và các khoản điều chỉnh.</p>
+                <div class="space-y-4">
+                    <div class="flowchart-step text-center p-3 rounded-lg">
+                        <p class="font-bold text-lg text-[#005f73]">Doanh thu</p>
+                        <p class="text-sm text-gray-600">Toàn bộ tiền bán hàng, gia công, cung ứng dịch vụ</p>
+                    </div>
+                    <div class="text-center text-3xl font-bold flowchart-arrow">↓</div>
+                     <div class="flowchart-step text-center p-3 rounded-lg">
+                        <p class="font-bold text-lg text-[#005f73]">(-) Các khoản chi được trừ</p>
+                        <p class="text-sm text-gray-600">Chi phí thực tế phát sinh liên quan đến SXKD</p>
+                    </div>
+                    <div class="text-center text-3xl font-bold flowchart-arrow">↓</div>
+                    <div class="flowchart-step text-center p-3 rounded-lg">
+                        <p class="font-bold text-lg text-[#005f73]">(=) Thu nhập chịu thuế</p>
+                        <p class="text-sm text-gray-600">Tổng thu nhập từ mọi hoạt động</p>
+                    </div>
+                    <div class="text-center text-3xl font-bold flowchart-arrow">↓</div>
+                     <div class="flowchart-step text-center p-3 rounded-lg">
+                        <p class="font-bold text-lg text-[#005f73]">(-) Thu nhập được miễn thuế</p>
+                        <p class="text-sm text-gray-600">Các khoản được Luật quy định miễn</p>
+                    </div>
+                    <div class="text-center text-3xl font-bold flowchart-arrow">↓</div>
+                     <div class="flowchart-step text-center p-3 rounded-lg">
+                        <p class="font-bold text-lg text-[#005f73]">(-) Các khoản lỗ được kết chuyển</p>
+                        <p class="text-sm text-gray-600">Lỗ từ các kỳ tính thuế trước (tối đa 5 năm)</p>
+                    </div>
+                     <div class="text-center text-3xl font-bold flowchart-arrow">↓</div>
+                    <div class="text-center p-4 rounded-lg bg-[#005f73] text-white">
+                        <p class="font-bold text-xl">(=) Thu nhập tính thuế</p>
+                         <p class="text-sm ">Đây là căn cứ để nhân với thuế suất</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5: Tax Rates -->
+            <div class="card md:col-span-2 lg:col-span-3">
+                 <h2 class="text-2xl font-bold text-[#0a9396] mb-4 text-center">Các mức thuế suất TNDN</h2>
+                 <p class="text-center text-gray-600 mb-6">Luật quy định các mức thuế suất khác nhau, bao gồm thuế suất chung và các mức ưu đãi, đặc biệt.</p>
+                <div class="chart-container">
+                    <canvas id="taxRateChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Section 6: Tax Incentives -->
+            <div class="card lg:col-span-3">
+                <h2 class="text-2xl font-bold text-[#0a9396] mb-6 text-center">Ưu đãi thuế TNDN</h2>
+                <p class="text-center text-gray-600 mb-8">Doanh nghiệp được hưởng ưu đãi thuế theo ngành nghề, địa bàn và quy mô đầu tư nhằm khuyến khích phát triển các lĩnh vực và khu vực trọng điểm.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="icon-box">
+                        <div class="text-4xl mb-3">⚙️</div>
+                        <h4 class="font-bold text-lg text-[#005f73] mb-2">Theo ngành nghề</h4>
+                        <p class="text-sm text-gray-600">Công nghệ cao, phần mềm, năng lượng tái tạo, nông nghiệp công nghệ cao, công nghiệp hỗ trợ...</p>
+                    </div>
+                    <div class="icon-box">
+                        <div class="text-4xl mb-3">📍</div>
+                        <h4 class="font-bold text-lg text-[#005f73] mb-2">Theo địa bàn</h4>
+                        <p class="text-sm text-gray-600">Địa bàn kinh tế - xã hội đặc biệt khó khăn, khu kinh tế, khu công nghệ cao...</p>
+                    </div>
+                    <div class="icon-box">
+                         <div class="text-4xl mb-3">📈</div>
+                        <h4 class="font-bold text-lg text-[#005f73] mb-2">Theo quy mô</h4>
+                        <p class="text-sm text-gray-600">Dự án đầu tư vốn lớn (ví dụ: từ 6.000 hoặc 12.000 tỷ đồng), dự án công nghệ cao...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 7: Exemption/Reduction Periods -->
+            <div class="card md:col-span-1">
+                 <h2 class="text-2xl font-bold text-[#0a9396] mb-6">Thời gian Miễn, Giảm thuế</h2>
+                 <p class="text-gray-600 mb-4">Đối với các dự án ưu đãi đầu tư, doanh nghiệp có thể hưởng lộ trình miễn và giảm thuế kéo dài.</p>
+                 <div class="relative pl-8">
+                     <div class="timeline-line"></div>
+                     <div class="timeline-item relative mb-6">
+                         <h4 class="font-bold text-[#ee9b00]">Miễn thuế 100%</h4>
+                         <p class="text-sm text-gray-600">Tối đa 4 năm đầu.</p>
+                     </div>
+                     <div class="timeline-item relative">
+                         <h4 class="font-bold text-[#ca6702]">Giảm thuế 50%</h4>
+                         <p class="text-sm text-gray-600">Tối đa 9 năm tiếp theo.</p>
+                     </div>
+                 </div>
+                 <p class="text-xs text-gray-500 mt-4">*Áp dụng cho trường hợp ưu đãi phổ biến nhất. Các trường hợp đặc biệt có thể có lộ trình khác.</p>
+            </div>
+
+            <!-- Section 8: Other Key Provisions -->
+            <div class="card md:col-span-1">
+                <h2 class="text-2xl font-bold text-[#0a9396] mb-4">Chuyển lỗ</h2>
+                <p class="kpi-number text-7xl text-center">5 năm</p>
+                <p class="mt-2 text-center text-gray-600">Doanh nghiệp được chuyển lỗ liên tục trong tối đa 5 năm kể từ năm tiếp theo năm phát sinh lỗ.</p>
+            </div>
+
+            <div class="card md:col-span-1">
+                <h2 class="text-2xl font-bold text-[#0a9396] mb-4">Quỹ KH&CN</h2>
+                <p class="kpi-number text-7xl text-center">20%</p>
+                <p class="mt-2 text-center text-gray-600">Doanh nghiệp được trích tối đa 20% thu nhập tính thuế hàng năm để lập Quỹ Phát triển Khoa học và Công nghệ.</p>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        // Function to wrap long labels for Chart.js
+        const wrapLabel = (label, maxLength) => {
+            if (label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).length > maxLength && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine = currentLine ? currentLine + ' ' + word : word;
+                }
+            });
+            lines.push(currentLine);
+            return lines;
+        };
+
+        const taxRateData = {
+            labels: [
+                wrapLabel('Thuế suất chung', 16),
+                wrapLabel('DN DT <= 3 tỷ', 16),
+                wrapLabel('DN DT >3-50 tỷ', 16),
+                wrapLabel('Khai thác dầu khí, tài nguyên quý hiếm (phạm vi)', 16),
+            ],
+            datasets: [{
+                label: 'Thuế suất TNDN (%)',
+                data: [20, 15, 17, 37.5], /* 37.5 is midpoint of 25-50 for visualization */
+                backgroundColor: [
+                    '#005f73', /* Primary Blue */
+                    '#94d2bd', /* Accent 1 */
+                    '#e9d8a6', /* Accent 2 */
+                    '#bb3e03', /* Accent 5 */
+                ],
+                borderColor: [
+                    '#005f73',
+                    '#0a9396',
+                    '#ee9b00',
+                    '#9b2226',
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        const taxRateConfig = {
+            type: 'bar',
+            data: taxRateData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Thuế suất (%)',
+                            color: '#005f73'
+                        },
+                        ticks: {
+                            color: '#005f73'
+                        },
+                        grid: {
+                            color: '#e0e0e0'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: '#005f73'
+                        },
+                        grid: {
+                            color: '#e0e0e0'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                } else {
+                                  return label;
+                                }
+                            },
+                             label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    if(context.dataIndex === 3) {
+                                        label += '25% - 50%';
+                                    } else {
+                                        label += context.parsed.y + '%';
+                                    }
+                                }
+                                return label;
+                            }
+                        },
+                        backgroundColor: '#005f73',
+                        titleColor: '#ffffff',
+                        bodyColor: '#ffffff',
+                        borderColor: '#94d2bd',
+                        borderWidth: 1
+                    }
+                }
+            }
+        };
+
+        const taxRateChart = new Chart(
+            document.getElementById('taxRateChart'),
+            taxRateConfig
+        );
+    </script>
+</body>
+</html>
